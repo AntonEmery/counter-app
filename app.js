@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const routes = require('./routes/index');
 const path = require('path');
 const helpers = require('./helpers');
-
 const app = express();
 
 // setup views
