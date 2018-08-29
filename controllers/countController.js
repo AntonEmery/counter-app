@@ -6,6 +6,10 @@ exports.increment = (req, res) => {
   number++;
   fs.writeFile('./data.txt', number, function() {
     res.render('index', { number });
-
   });
+}
+
+exports.readFile = (req, res) => {
+  let number = fs.readFileSync('./data.txt', 'utf8');
+  res.render('view', { number })
 }
