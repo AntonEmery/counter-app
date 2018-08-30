@@ -11,7 +11,6 @@ router.get('/', function(req, res) {
 })
 
 router.post('/', countController.increment);
-
 router.get('/view', countController.readFile);
 
 module.exports = router;

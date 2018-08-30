@@ -2,4 +2,10 @@ extends Layout
 
 block content
   p View Page
-  p #{number}
+  p(id="counter") #{number}
+  script(src="/socket.io/socket.io.js")
+  script.
+      var socket = io('http://localhost:7777');
+      socket.on('updateCounter', function (data) {
+      document.getElementById('counter').innerHTML = data.data;
+      });
