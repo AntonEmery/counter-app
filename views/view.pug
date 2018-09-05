@@ -2,10 +2,12 @@ extends Layout
 
 block content
   div(class="wrapper")
+    //- pass in number from route variable
     p(id="counter") #{number}
   script(src="/socket.io/socket.io.js")
   script.
       var socket = io('http://localhost:7777');
+      //- when socketio emits a number change the inner html of the counter p tag
       socket.on('updateCounter', function (data) {
       document.getElementById('counter').innerHTML = data.data;
       });
