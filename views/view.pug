@@ -1,8 +1,8 @@
 extends Layout
 
 block content
-  p View Page
-  p(id="counter") #{number}
+  div(class="wrapper")
+    p(id="counter") #{number}
   script(src="/socket.io/socket.io.js")
   script.
       var socket = io('http://localhost:7777');

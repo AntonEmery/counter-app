@@ -1,3 +1,7 @@
+body {
+  font-family: 'Montserrat', sans-serif
+}
+
 .wrapper {
   width: 80%;
   margin: 0 auto;
@@ -8,7 +12,31 @@ label {
   margin-right: 5px;
 }
 
-
 #counter {
+  font-size: 8em;
+}
+
+input {
   font-size: 30px;
+  padding-left: 5px;
+}
+
+.number-input {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+button {
+  padding: 40px 40px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  border-color: none;
+  background-color: #414245;
+  color:#fff;
+}
+
+.button {
+  margin-top: 40px;
 }
