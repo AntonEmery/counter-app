@@ -3,7 +3,7 @@ const router = express.Router();
 const countController = require('../controllers/countController');
 const fs = require('fs');
 
-
+// load the home page
 router.get('/', function(req, res) {
   let data = fs.readFileSync('./data.txt', 'utf8');
   let number = parseInt(data);
@@ -11,6 +11,8 @@ router.get('/', function(req, res) {
 })
 
 router.post('/', countController.increment);
-router.get('/view', countController.readFile);
+
+// load the view page
+router.get('/view', countController.viewPage);
 
 module.exports = router;
