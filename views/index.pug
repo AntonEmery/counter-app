@@ -1,8 +1,10 @@
 extends Layout
 
 block content
-  p Main page
-  p(id="counter")
-  p #{number}
-  form(method="POST")
-    input(type="submit" value="Increment")
+  div(class="wrapper")
+    p(id="counter") #{number}
+    form(method="POST")
+      label(for="custom-number") Custom Number
+      input(type="text" name="custom_number")
+      p
+        input(type="submit" value="+1 or Enter Custom Number")

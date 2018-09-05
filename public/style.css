@@ -1,0 +1,14 @@
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+label {
+  margin-right: 5px;
+}
+
+
+#counter {
+  font-size: 30px;
+}
