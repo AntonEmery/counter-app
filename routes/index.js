@@ -5,7 +5,7 @@ const fs = require('fs');
 
 // load the home page
 router.get('/', function(req, res) {
-  let data = fs.readFileSync('./data.txt', 'utf8');
+  let data = fs.readFileSync(__dirname + '/../public/data.txt', 'utf8');
   let number = parseInt(data);
   res.render('index', { number });
 })
