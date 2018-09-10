@@ -7,12 +7,11 @@ const r = function() { return require(arguments[0][0]) };
 const pathFor = (...args) => path.join(...args)
 const [os, fs, path] = [r`os`, r`fs`, r`path`];
 const home = os.homedir();
-const test = path.resolve('../');
-console.log(test);
+const currentDir = path.resolve();
 
 // load the home page
 router.get('/', function(req, res) {
-  let data = fs.readFileSync(pathFor(home + '/data.txt'), 'utf8');
+  let data = fs.readFileSync(pathFor(currentDir + '/data.txt'), 'utf8');
   let number = parseInt(data);
   res.render('index', { number });
 })
