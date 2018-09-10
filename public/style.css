@@ -3,7 +3,7 @@ body {
 }
 
 .wrapper {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
 }
@@ -14,16 +14,17 @@ label {
 
 #counter {
   font-size: 8em;
+  margin-bottom: 0;
 }
 
 input {
-  font-size: 30px;
+  font-size: 60px;
   padding-left: 5px;
 }
 
 .number-input {
-  width: 50px;
-  height: 50px;
+  width: 20%;
+  line-height: 100%;
   border: 1px solid black;
   border-radius: 5px;
 }
@@ -31,7 +32,7 @@ input {
 button {
   padding: 40px 40px;
   border-radius: 5px;
-  font-size: 1.5em;
+  font-size: 3.5em;
   border-color: none;
   background-color: #414245;
   color:#fff;
@@ -39,4 +40,20 @@ button {
 
 .button {
   margin-top: 40px;
+}
+
+.increment button {
+  width: 100%;
+}
+
+.custom {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.custom button {
+  width: 70%;
+  margin-right: 5%;
 }
