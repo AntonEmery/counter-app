@@ -5,7 +5,7 @@ const pathFor = (...args) => path.join(...args)
 const [os, fs, path] = [r`os`, r`fs`, r`path`];
 const home = os.homedir();
 
-exports.increment = (req, res) => {
+exports.customNumber = (req, res) => {
   // allows use of socket.io in routes
   var io = req.app.get('socketio');
   // if the number input contains a number
@@ -18,21 +18,25 @@ exports.increment = (req, res) => {
       res.redirect('/');
       return;
     });
-    // if the input does not contain a number then they must have wanted to increment it.
-  } else {
-    // read current number from the text file
-    let data = fs.readFileSync(pathFor(home + '/data.txt'), 'utf8');
-    // turn it into a number
-    let number = parseInt(data);
-    // increase it by one
-    number++;
-    // write the incremented number back to the text file, push it out to the view page, reload the home page
-    fs.writeFile(pathFor(home + '/data.txt'), number, function() {
-      io.emit('updateCounter', { data: number });
-      res.redirect('/');
-    });
   }
 }
+
+exports.increment = (req, res) => {
+   // allows use of socket.io in routes
+   var io = req.app.get('socketio');
+  // read current number from the text file
+  let data = fs.readFileSync(pathFor(home + '/data.txt'), 'utf8');
+  // turn it into a number
+  let number = parseInt(data);
+  // increase it by one
+  number++;
+  // write the incremented number back to the text file, push it out to the view page, reload the home page
+  fs.writeFile(pathFor(home + '/data.txt'), number, function() {
+    io.emit('updateCounter', { data: number });
+    res.redirect('/');
+  });
+}
+
 
 exports.viewPage = (req, res) => {
   let number = fs.readFileSync(pathFor(home + '/data.txt'), 'utf8');

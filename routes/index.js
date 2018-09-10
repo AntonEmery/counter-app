@@ -18,6 +18,7 @@ router.get('/', function(req, res) {
 })
 
 router.post('/', countController.increment);
+router.post('/customNumber', countController.customNumber);
 
 // load the view page
 router.get('/view', countController.viewPage);
