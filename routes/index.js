@@ -6,7 +6,6 @@ const countController = require('../controllers/countController');
 const r = function() { return require(arguments[0][0]) };
 const pathFor = (...args) => path.join(...args)
 const [os, fs, path] = [r`os`, r`fs`, r`path`];
-const home = os.homedir();
 const currentDir = path.resolve();
 
 // load the home page
