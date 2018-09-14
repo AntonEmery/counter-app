@@ -18,6 +18,7 @@
   pkg package.json
   ````
   Select the approriate binary file from the three created
+  Be sure to place a `data.txt` in the same directory that binary is being installed in.
 
 #### Technologies Used
   - Node.js - For all the server side code and writing to the text file
