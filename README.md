@@ -6,6 +6,7 @@
 #### Running
   ````
   git clone https://github.com/AntonEmery/counter-app
+  cd counter-app
   npm install
   npm start
   ````
