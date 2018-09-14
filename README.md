@@ -5,10 +5,12 @@
 
 #### Running
   ````
-  git clone
+  git clone https://github.com/AntonEmery/counter-app
   npm install
   npm start
   ````
+  Once the app starts your IP address should be displayed in the terminal. Open `your-ip-address:7777` and `your-ip-address:7777/view` in the browser
+
 
 #### Package the contents into a binary
   ````
@@ -20,5 +22,6 @@
   - Node.js - For all the server side code and writing to the text file
   - Pug - basic templating
   - Socket.io - For pushing the updated number from the text file to the `/view` page
+  - pkg - Packages the app into a binary for running on various operating systems.
 
 
