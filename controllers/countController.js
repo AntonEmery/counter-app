@@ -39,7 +39,6 @@ exports.increment = (req, res) => {
   });
 }
 
-
 exports.viewPage = (req, res) => {
   let number = fs.readFileSync(pathFor(currentDir + '/data.txt'), 'utf8');
   res.render('view', { number })
