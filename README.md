@@ -17,7 +17,7 @@
   ````
   pkg package.json
   ````
-  Select the approriate binary file from the three created
+  Select the approriate binary file from the three created.
   Be sure to place a `data.txt` in the same directory that binary is being installed in.
 
 #### Technologies Used
