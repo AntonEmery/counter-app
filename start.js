@@ -1,7 +1,8 @@
 const app = require('./app');
+const ip = require('ip')
 
 app.set('port', process.env.port || 7777);
-const server = app.listen(7777, '192.168.0.102', () => {
+const server = app.listen(7777, ip.address(), () => {
   console.log(`App running on port ${server.address().port}`);
 })
 
